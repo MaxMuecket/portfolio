@@ -1,0 +1,12 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  ffont-family: Arial, Helvetica, sans-serif;
+  background: #24282f;
+  color: rgb(158, 158, 158);
+  margin: 0;
+}
