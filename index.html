@@ -7,7 +7,7 @@
     <link href="styles.css" rel="stylesheet" />
     <title>Portfolio</title>
   </head>
-  <body>
+  <body class="app">
     <header class="header">
       <nav class="navbar">
         <section>
@@ -15,22 +15,29 @@
             <li>
               <a href="#">MM</a>
             </li>
+          </ul>
+        </section>
+
+        <section>
+          <ul>
             <li>
-              <a href="#">THAT´S ME.</a>
+              <a href="#profile-section">About Me</a>
             </li>
             <li>
-              <a href="#">MY MOTIVATION.</a>
+              <a href="#main-section">Interests</a>
             </li>
             <li>
-              <a href="#footer">GET IN TOUCH.</a>
+              <a href="#footer-section">Contact</a>
             </li>
           </ul>
         </section>
       </nav>
-      <section class="profile">
+
+      <section class="profile" id="profile-section">
         <section>
-          <img src="images/profile-image.png" alt=" " />
+          <img src="images/profile.png" alt=" " />
         </section>
+
         <section class="profile-info">
           <h1>Moin</h1>
           <h2>Ich bins der Max</h2>
@@ -38,11 +45,22 @@
         </section>
       </section>
     </header>
-    <main class="main">
-      <h1>main</h1>
-      <img src="images/berlin.png" alt="" />
+
+    <main class="main" id="main-section">
+      <article class="bachelor">
+        <section>
+          <h1>Bachelor</h1>
+        </section>
+      </article>
+
+      <article class="master">
+        <section>
+          <h1>Master</h1>
+        </section>
+      </article>
     </main>
-    <footer class="footer">
+
+    <footer class="footer" id="footer-section">
       <section>
         <ul>
           <li>
