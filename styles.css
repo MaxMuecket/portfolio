@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
-body {
+.app {
   font-family: Arial, Helvetica, sans-serif;
   background: #64dfdf;
-  color: 48bfe3;
   margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    ". footer footer .";
 }
 
 a {
@@ -17,53 +24,77 @@ a {
 
 .header {
   background: #64dfdf;
+  grid-area: header;
+}
+
+.header a {
+  color: #fff;
+  text-shadow: 2px 2px 8px #6930c3;
 }
 
 .navbar {
-  background: #5e60ce;
-  margin: 2em;
+  background: linear-gradient(110deg, #5390d9 35%, #4ea8de 45%);
+  margin-top: 0;
+  margin-bottom: 2em;
   padding: 0.02em;
-  border-radius: 3em;
+  border-end-start-radius: 2em;
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-area: navbar;
 }
 
 .navbar ul {
   list-style: none;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: auto;
 }
 
-.navbar a {
-  color: #fff;
+.navbar a:hover {
+  color: black;
 }
 
 .profile {
   background: #4ea8de;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 5fr;
-  margin: 2em;
-  padding: 5em;
-  border-radius: 3em;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 35em;
+  margin-top: 5em;
+  padding: 0;
+  border-top-left-radius: 8em;
+  border-bottom-left-radius: 8em;
+  box-shadow: 2px 2px 8px black;
 }
 
 .profile img {
-  width: 150px;
-  padding: 0;
+  width: 200px;
+  padding-left: 5em;
+  padding-top: 1em;
+  padding-bottom: 0;
+  border-bottom-right-radius: 7em;
+  opacity: 2;
 }
 
 .profile-info {
-  padding: 0.75;
+  padding: 0.75em;
+  color: white;
 }
 
 .main {
   background: #5390d9;
-  margin: 2em;
-  padding: 5em;
-  border-radius: 3em;
+  margin-right: 20em;
+  margin-top: 4.5em;
+  padding: 1em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  grid-area: main;
+  box-shadow: 1px 1px 8px black;
+
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "bachelor master . .";
 }
 
 .main img {
@@ -71,13 +102,43 @@ a {
   padding: 0;
 }
 
+.bachelor {
+  background: #4ea8de;
+  grid-area: bachelor;
+  padding: 1em;
+  padding-bottom: 25em;
+  border-radius: 1em;
+}
+
+.bachelor:hover {
+  background: white;
+}
+
+.master {
+  background: #4ea8de;
+  grid-area: master;
+  padding: 1em;
+  margin-left: 1em;
+  border-radius: 1em;
+}
+
+.master:hover {
+  background: white;
+}
+
 .footer {
   background: #5e60ce;
-  margin: 2em;
-  padding: 0.02em;
-  border-radius: 3em;
+  background: linear-gradient(110deg, #5390d9 35%, #5e60ce 45%);
+  margin-top: 4.5em;
+  border-top-right-radius: 3em;
+  border-top-left-radius: 3em;
+  grid-area: footer;
 }
 
 .footer a {
   color: white;
+}
+
+.footer ul {
+  list-style: none;
 }
